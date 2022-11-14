@@ -38,24 +38,29 @@ app.get("/info", async function(req,res){
     
 });
 
-app.post("/gravar", async function(req,res){
+
+
+
+app.post("/produto/salvar", async function(req,res){
     
-    const response= await service.salvaCadastro({codigo:req.body.codigo,
-                                                 nome:req.body.nome,
-                                                 endereco:req.body.endereco});
+    const response= await service.salvaCadastro({codigo: req.body.codigo,
+                                                descricao: req.body.descricao,
+                                                unidademedida: req.body.unidademedida,
+                                                precoun: req.body.precoun,
+                                                estoque: req.body.estoque});
     console.log(response.data);
     res.render('form');
     
 });
 
-app.get("/buscarTodos", async function(req,res){
+app.get("/produto/listar", async function(req,res){
     const {data}= await service.getDados();
     console.log(data);
     res.render('form',data)
     
 });
 
-app.get("/buscar/:key", async function(req,res){
+app.get("/produto/listar/:key", async function(req,res){
     const key=req.params.key;
     const {data}= await service.getDadosPorChave(key);
     console.log(data);

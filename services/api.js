@@ -5,7 +5,7 @@ const axios = require('axios').default;
 // http://localhost:3000
 
 const api = axios.create({
-  baseURL: "https://rodjlebacktests.azurewebsites.net/",
+  baseURL: "https://alula1011back.azurewebsites.net",
 });
 
 module.exports = api;

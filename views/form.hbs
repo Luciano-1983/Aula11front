@@ -6,22 +6,32 @@
     </script>
 </head>
 <h1>Versão em Master</h1>
-<form action="/gravar" method="POST">
+<form action="/produto/salvar" method="POST">
     <label>Codigo</label>
     <input type="text" name="codigo" value=""/>
-    <label>Nome</label>
-    <input type="text" name="nome" value=""/>
-    <label>Endereço</label>
-    <input type="text" name="endereco" value=""/>
+    <label>Descrição</label>
+    <input type="text" name="descricao" value=""/>
+    <label>Unidade de medida</label>
+    <input type="text" name="unidademedida" value=""/>
+    <label>Preço unitário</label>
+    <input type="text" name="precoun" value=""/>
+    <label>Estoque</label>
+    <input type="text" name="estoque" value=""/>
+
     <input type="submit" value="Salvar"/>
 </form>
 
-<form action="/buscarTodos" method="GET">
+<form action="/produto/listar" method="GET">
     <label>Codigo</label>
     <input type="text" name="codigo" disabled value="{{codigo}}"/>
-    <label>Nome</label>
-    <input type="text" name="nome" disabled value="{{nome}}"/>
-    <label>Endereço</label>
-    <input type="text" name="nome" disabled value="{{endereco}}"/>
+    <label>Descrição</label>
+    <input type="text" name="descricao" disabled value="{{descricao}}"/>
+    <label>Unidade de medida</label>
+    <input type="text" name="unidademedida" disabled value="{{unidademedida}}"/>
+    <label>Preço unitário</label>
+    <input type="text" name="precoun" disabled value="{{precoun}}"/>
+    <label>Estoque</label>
+    <input type="text" name="estoque" disabled value="{{estoque}}"/>
+
     <input type="submit" value="Buscar"/>
 </form>
