@@ -54,7 +54,7 @@ app.post("/produto/salvar", async function(req,res){
 });
 
 app.get("/produto/listar", async function(req,res){
-    const {data}= await service.getDados();
+    const data= await service.getDados();
     console.log(data);
     res.render('form',data)
     
@@ -62,9 +62,9 @@ app.get("/produto/listar", async function(req,res){
 
 app.get("/produto/listar/:key", async function(req,res){
     const key=req.params.key;
-    const {data}= await service.getDadosPorChave(key);
+    const data= await service.getDadosPorChave(key);
     console.log(data);
-    res.render('form',{data})
+    res.render('form',data)
     
 });
 

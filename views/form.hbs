@@ -34,4 +34,83 @@
     <input type="text" name="estoque" disabled value="{{estoque}}"/>
 
     <input type="submit" value="Buscar"/>
+
+
+    <ul class="people_list">
+         {{#each data}}
+             <li>{{codigo}}-{{descricao}}</li>
+        {{/each}}
+    </ul>
+
+    <table>
+        <th>codigo</th>
+        <th>Descrição</th>
+        <th>Estoque</th>
+        {{#each data}}
+        <tr>
+            <td>
+                {{codigo}}
+            </td>
+            <td>
+                {{descricao}}
+            </td>
+            <td>
+                {{estoque}}
+            </td>
+        </tr>
+         {{/each}}
+    </table>
+         
+             
+       
+    </ul>
+
 </form>
+
+
+<form action="/produto/listar/987" method="GET">
+    <label>Codigo</label>
+    <input type="text" name="codigo" disabled value="{{codigo}}"/>
+    <label>Descrição</label>
+    <input type="text" name="descricao" disabled value="{{descricao}}"/>
+    <label>Unidade de medida</label>
+    <input type="text" name="unidademedida" disabled value="{{unidademedida}}"/>
+    <label>Preço unitário</label>
+    <input type="text" name="precoun" disabled value="{{precoun}}"/>
+    <label>Estoque</label>
+    <input type="text" name="estoque" disabled value="{{estoque}}"/>
+
+    <input type="submit" value="Buscar"/>
+
+
+    <ul class="people_list">
+         {{#each data}}
+             <li>{{codigo}}-{{descricao}}</li>
+        {{/each}}
+    </ul>
+
+    <table>
+        <th>codigo</th>
+        <th>Descrição</th>
+        <th>Estoque</th>
+        {{#each data}}
+        <tr>
+            <td>
+                {{codigo}}
+            </td>
+            <td>
+                {{descricao}}
+            </td>
+            <td>
+                {{estoque}}
+            </td>
+        </tr>
+         {{/each}}
+    </table>
+         
+             
+       
+    </ul>
+
+</form>
+

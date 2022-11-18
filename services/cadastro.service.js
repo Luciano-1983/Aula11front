@@ -59,6 +59,7 @@ try {
 
 async function getDadosPorChave(key){
 try {
+  console.log(key)
   return await api.get("/produto/listar/"+key);   
 } catch (error) {
   console.log("Error: "+error)
